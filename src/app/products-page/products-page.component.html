@@ -1,7 +1,21 @@
 <h1>All products</h1>
 
-<ul>
-    <li *ngFor="let product of products">
+<div class="Card ">
+
+  
+
+    <div *ngFor="let product of products">
+
+      <img class="Image" />
+
+
+      <div class="cardBody">
         <p class="title">{{ product.title }}</p>
-    </li>
-</ul>
+        <p class="Price"> {{ product.price}} </p>
+      </div>
+
+    </div>
+
+
+</div>
+

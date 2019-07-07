@@ -33,14 +33,14 @@ describe('ProductsPageComponent', () => {
   });
 
   it('should render all products', () => {
-    const product: Product = new Product("BTS underwear", "Do you want to feel like a Korean popstar?");
+    const product: Product = new Product("BTS underwear", "Do you want to feel like a Korean popstar?", "five" );
     mockProductService.getAllProducts.returns([product]);
 
     const ourFixture: ComponentFixture<ProductsPageComponent> = TestBed.createComponent(ProductsPageComponent);
     ourFixture.detectChanges();
 
     const allTitleElements: Array<Element> = Array.from(
-      ourFixture.debugElement.nativeElement.querySelectorAll('ul li p.title')
+      ourFixture.debugElement.nativeElement.querySelectorAll(' p.title')
     );
     const allTitles: Array<string> = allTitleElements.map(e => e.textContent);
     expect(allTitles).toContain("BTS underwear");
